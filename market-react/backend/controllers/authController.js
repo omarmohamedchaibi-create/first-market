@@ -56,7 +56,7 @@ const login = async (req, res) => {
         res.cookie("jwt", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production", // https فقط في production
-        sameSite: "strict", // يمنع إرسالها مع cross-site requests
+        sameSite: "none", // يمنع إرسالها مع cross-site requests
         maxAge: 2 * 60 * 60 * 1000, // 2ساعة واحدة
         });
 
