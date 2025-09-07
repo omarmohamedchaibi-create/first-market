@@ -19,7 +19,8 @@ const app = express();
 // ================= Security Middlewares =================
 app.use(helmet());
 app.use(cors({
-  origin: ['http://localhost:5173'], // عدّلها عند النشر
+  origin: ['http://localhost:5173',
+          'https://first-market-frontend.onrender.com'], // عدّلها عند النشر
   credentials: true
 }));
 
